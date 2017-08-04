@@ -66,6 +66,49 @@ ci restituisce
 
 false
 
+*N.B*
+
+Creare funzioni (come maggiorenne) può essere conveniente quando vengono utilizzate più di una volta.
+Javascript gestisce anche le cosiddette funzioni anonime (senza nome) che sono più immediate da leggere e da scrivere. Si possono usare quando come parametro dobbiamo usare una funzione come nel caso precedente.
+La sintassi è
+
+```js
+// Multilinea
+
+(parametro1, parametro2) => {
+    ....
+    return something;
+}
+
+// Singola linea
+
+(parametro1, parametro2) => {return parametro1 + parametro2;}
+
+```
+
+La sintassi è simile a quella di una normale funzione senza la parola chiave `function` e con l'aggiunta della `=>`
+
+
+L'esempio di prima si può riscrivere banalmente come
+
+```js
+[32, 33, 16, 40].every((eta) => {return eta >= 18;});
+
+// o semplicemente
+
+[32, 33, 16, 40].every((element) => eta >= 18);
+```
+
+Il secondo caso non contiene ne parentesi graffe ne return, è un modo più snello per scrivere espressioni esprimibili in una sola riga.
+
+```js
+(eta) => eta >= 18
+```
+equivale a:
+```js
+(eta) => {return eta >= 18;}
+```
+
 
 ## fill()
 
